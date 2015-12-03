@@ -10,7 +10,7 @@
     font-family: $f-family;
     @include scale-type(0.875);
 
-    background-color: lighten($c-input, 70%);
+    background-color: lighten($c-input, 12%);
 
     appearance: none;
     border: 1px solid $c-input;

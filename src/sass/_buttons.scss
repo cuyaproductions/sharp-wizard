@@ -9,12 +9,15 @@
     text-align: center;
 
     background-color: adjust-color($color, $lightness: 15%);
+    border: none;
     border-bottom: 2px solid $color;
 
     text-decoration: none;
     text-shadow: 0 1px 0 rgba(black, 0.5);
 
     cursor: pointer;
+    outline: none;
+    appearance: none;
 
     &:active {
         position: relative;
@@ -68,5 +71,27 @@
 
         transform: rotate(180deg);
         transform-origin: center;
+    }
+}
+
+a {
+    &.link--red {
+        color: $c-primary;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &.start-over {
+        color: lighten($c-text, 20%);
+        display: inline-block;
+        margin-left: 1em;
+        text-decoration: none;
+        &:hover {
+            color: lighten($c-text, 10%);
+            text-decoration: underline;
+        }
     }
 }

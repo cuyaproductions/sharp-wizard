@@ -2,7 +2,7 @@
     $parent: &;
     width: 100%;
     max-width: 650px;
-    flex: 0 0 auto;
+    flex: 0 1 auto;
     @include grid($direction: row, $wrap: wrap, $align: stretch);
     box-sizing: border-box;
     padding: 30px;

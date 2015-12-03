@@ -1,6 +1,7 @@
 .results {
     $parent: &;
-    flex: 1 0 500px;
+    flex: 0 1 500px;
+    max-height: 500px;
     width: 100%;
     max-width: 650px;
     margin: auto;
@@ -36,11 +37,32 @@
         }
     }
 
+    &--no-filter {
+        aside {
+            flex: 0 0 50px;
+            box-sizing: border-box;
+        }
+        #{$parent}__back {
+            height: 50px;
+            background-size: 50%;
+        }
+    }
+
     main {
         flex: 1 1 100%;
         padding: 43px;
         overflow-y: scroll;
         box-sizing: border-box;
+    }
+
+    &__img {
+        display: none;
+        @include m-query(tablet) {
+            display: block;
+            float: left;
+            max-height: 110px;
+            margin-right: 2em;
+        }
     }
 
     &__item {
@@ -73,7 +95,7 @@
         }
     }
 
-    &__download {
+    &__btn {
         @include btn-regular($c-primary);
         padding-right: 2.3em;
 

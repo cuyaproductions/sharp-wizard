@@ -4,16 +4,16 @@ section.results
         a.results__back(href = "model.html") Back
         .filter
             h4.filter__title Pages Per Minute
-            a.filter__item(href = "results-filtered.html") 20 - 35
-            a.filter__item(href = "results-filtered.html") 36 - 45
-            a.filter__item(href = "results-filtered.html") 46 - 55
-            a.filter__item(href = "results-filtered.html") 56 - 65
-            a.filter__item(href = "results-filtered.html") 66 - 75
-            a.filter__item(href = "results-filtered.html") +75
+            a.filter__item.filter__item--active(href = "results.html") 20 - 35
+            a.filter__item(href = "#") 36 - 45
+            a.filter__item(href = "#") 46 - 55
+            a.filter__item(href = "#") 56 - 65
+            a.filter__item(href = "#") 66 - 75
+            a.filter__item(href = "#") +75
     main
         h1 Your head-to-head comparisons are ready!
         - var n = 0
-        while n < 4
+        while n < 1
             article.results__item
                 img.results__img(src = 'imgs/img-MX-M354N.jpg')
                 h2.results__title Sharp MX-M354N

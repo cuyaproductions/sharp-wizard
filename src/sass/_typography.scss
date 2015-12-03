@@ -3,6 +3,7 @@ body {
     font-family: $f-family;
     font-size: 16px;
     line-height: 1.25;
+    font-weight: 300;
 }
 
 @mixin scale-type($scale) {

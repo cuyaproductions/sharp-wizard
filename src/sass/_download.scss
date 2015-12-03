@@ -1,0 +1,70 @@
+.results {
+        &__download {
+        main {
+            position: relative;
+            overflow: hidden;
+        }
+    }
+}
+.download {
+    $parent: &;
+    &__overlay {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        left: 0;
+        right: 0;
+        background-color: rgba(#000, 0.6);
+    }
+
+    &__modal {
+        background-color: #fff;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 35px;
+        box-sizing: border-box;
+        @include grid($direction: column, $align: stretch);
+
+        label {
+            margin-bottom: 0.8em;
+            display: block;
+        }
+
+        #{$parent}__email {
+            transition: box-shadow 200ms ease-out;
+            &--error {
+                box-shadow: 0 0 0 1px rgba($c-primary, 0.5);
+            }
+        }
+
+        #{$parent}__btn {
+            @include btn-regular($c-primary);
+        }
+
+        @include m-query(tablet) {
+            flex-direction: row;
+            align-items: flex-end;
+            padding: 35px 65px;
+
+            #{$parent}__email {
+                margin-bottom: 0;
+                flex: 1 1 auto;
+                margin-right: 0.6em;
+            }
+        }
+    }
+
+    &__close {
+        height: 15px;
+        width: 15px;
+        position: absolute;
+        top: 18px;
+        right: 18px;
+
+        background-image: url(#{$img-base}icon-close.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}

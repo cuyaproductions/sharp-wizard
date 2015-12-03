@@ -1,6 +1,7 @@
 .filter{
     &__title {
         @include scale-type(0.875);
+        box-sizing: border-box;
         font-weight: 400;
         text-transform: uppercase;
         margin: 16px 0 0;
@@ -11,7 +12,11 @@
         display: block;
         margin: 0;
         padding: 14px 0;
+
+        color: #fff;
         font-weight: 300;
+        text-decoration: none;
+
         cursor: pointer;
 
         &:hover,

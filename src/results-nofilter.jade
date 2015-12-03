@@ -1,15 +1,7 @@
 include includes/header.jade
-section.results
+section.results.results--no-filter
     aside
         a.results__back(href = "model.html") Back
-        .filter
-            h4.filter__title Pages Per Minute
-            a.filter__item(href = "results-filtered.html") 20 - 35
-            a.filter__item(href = "results-filtered.html") 36 - 45
-            a.filter__item(href = "results-filtered.html") 46 - 55
-            a.filter__item(href = "results-filtered.html") 56 - 65
-            a.filter__item(href = "results-filtered.html") 66 - 75
-            a.filter__item(href = "results-filtered.html") +75
     main
         h1 Your head-to-head comparisons are ready!
         - var n = 0

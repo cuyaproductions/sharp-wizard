@@ -12,4 +12,4 @@ Run Grunt server
 grunt serve
 ````
 
-See wizard prototype http://localhost:9000/
+See wizard prototype (http://localhost:9000/)
