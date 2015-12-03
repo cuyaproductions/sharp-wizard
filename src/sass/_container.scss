@@ -1,0 +1,13 @@
+body {
+    @include grid($direction: column, $align: center, $wrap: nowrap);
+    padding: 0 15px 15px;
+@include m-query(tablet) {
+        padding: 0 50px 50px;
+    }
+
+    background-image: url('#{$img-base}img-background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}

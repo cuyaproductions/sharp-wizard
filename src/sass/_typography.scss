@@ -1,0 +1,63 @@
+body {
+    color: $c-text;
+    font-family: $f-family;
+    font-size: 16px;
+    line-height: 1.25;
+}
+
+@mixin scale-type($scale) {
+    line-height: 1.06;
+    font-size: 16px * $scale;
+    font-size: #{$scale}em;
+    margin: 0 0 0.818em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    width: 100%;
+    margin: 0 0 1em;
+}
+
+h1 {
+    @include scale-type(1.602);
+    @include m-query(tablet) {
+        @include scale-type(2.074);
+    }
+    font-weight: 400;
+}
+
+h2 {
+    @include scale-type(1.424);
+    @include m-query(tablet) {
+        @include scale-type(1.728);
+    }
+    font-weight: 300;
+}
+
+h3 {
+    @include scale-type(1.266);
+    @include m-query(tablet) {
+        @include scale-type(1.44);
+    }
+    font-weight: 300;
+}
+
+h4 {
+    @include scale-type(1.125);
+    @include m-query(tablet) {
+        @include scale-type(1.2);
+    }
+    font-weight: 300;
+}
+
+small {
+    @include scale-type(0.889);
+    @include m-query(tablet) {
+        @include scale-type(0.833);
+    }
+}

@@ -1,0 +1,5 @@
+@mixin m-query($size) {
+    @media screen and (min-width: #{map-get($media-queries,$size)}px) {
+        @content;
+    }
+}

@@ -1,0 +1,100 @@
+.question {
+    $parent: &;
+    width: 100%;
+    max-width: 650px;
+    flex: 0 0 auto;
+    @include grid($direction: row, $wrap: wrap, $align: stretch);
+    box-sizing: border-box;
+    padding: 30px;
+    @include m-query(tablet) {
+        padding: 60px 100px 40px;
+
+        &--model {
+            padding-left: 62px;
+            padding-right: 62px;
+        }
+    }
+
+    background-color: rgba($c-question-bg, .9);
+    border: 1px solid $c-question-bg;
+    border-radius: $default-radius;
+    height: auto;
+
+    select {
+        width: 100%;
+    }
+
+    &__nav {
+        width: 100%;
+        display: flex;
+
+        #{$parent}__next {
+            @include btn-next($c-secondary);
+            margin: 33px auto auto 1em;
+            &:active {
+                margin-top: 33px;
+            }
+        }
+
+        #{$parent}__prev {
+            @include btn-prev($c-secondary);
+            margin: 33px 1em auto auto;
+            &:active {
+                margin-top: 33px;
+            }
+        }
+    }
+
+    &__next {
+        @include btn-next($c-secondary);
+        margin: 33px auto auto;
+        text-indent: -99999em;
+        overflow: hidden;
+        &:active {
+            margin-top: 33px;
+        }
+    }
+
+    &__prev {
+        @include btn-prev($c-secondary);
+        margin: 33px auto auto;
+        text-indent: -99999em;
+        overflow: hidden;
+        &:active {
+            margin-top: 33px;
+        }
+    }
+
+    &--model {
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: stretch;
+
+        @include m-query(tablet) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+
+            #{$parent}__or {
+                margin: 0.5em 5px auto 6px;
+            }
+        }
+        #{$parent}__select {
+            flex: 1 1 auto;
+            width: auto;
+            margin: 0;
+        }
+        #{$parent}__all {
+            @include btn-regular($c-primary);
+            flex: 0 0 auto;
+            max-width: auto;
+        }
+        #{$parent}__or {
+            flex: 0 0 30px;
+            text-transform: uppercase;
+            text-align: center;
+            margin: 12px 0 8px;
+
+        }
+    }
+}

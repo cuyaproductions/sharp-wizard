@@ -1,0 +1,37 @@
+@mixin input() {
+    box-sizing: border-box;
+    height: 2.8em;
+    margin-bottom: 1em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    // width: 100%;
+
+    color: $c-text;
+    font-family: $f-family;
+    @include scale-type(0.875);
+
+    background-color: lighten($c-input, 70%);
+
+    appearance: none;
+    border: 1px solid $c-input;
+    border-radius: $default-radius;
+    outline: none;
+}
+
+select {
+    @include input();
+    box-sizing: border-box;
+    padding-right: 3.5em;
+
+    background-image: url(#{$img-base}icon-dropdown.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+}
+
+input {
+    box-sizing: border-box;
+    &[type=text], &[type=email] {
+        @include input();
+    }
+}

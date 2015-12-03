@@ -1,0 +1,23 @@
+.filter{
+    &__title {
+        @include scale-type(0.875);
+        font-weight: 400;
+        text-transform: uppercase;
+        margin: 16px 0 0;
+        padding: 8px 3px;
+    }
+    &__item {
+        @include scale-type(0.875);
+        display: block;
+        margin: 0;
+        padding: 14px 0;
+        font-weight: 300;
+        cursor: pointer;
+
+        &:hover,
+        &:active,
+        &--active {
+            background-color: darken($c-secondary, 6%);
+        }
+    }
+}

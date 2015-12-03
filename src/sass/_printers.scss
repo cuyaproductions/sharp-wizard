@@ -1,0 +1,28 @@
+@mixin printer() {
+    display: block;
+    position: fixed;
+    width: 40%;
+    @include m-query(tablet) {
+        width: 30%;
+    }
+    @include m-query(desktop) {
+        width: 20%;
+    }
+    z-index: -1;
+}
+.printer {
+    &--left {
+        @include printer();
+        bottom: 0;
+        left: 0;
+
+        max-width: 462px;
+    }
+    &--right {
+        @include printer();
+        bottom: 0;
+        right: 0;
+
+        max-width: 484px;
+    }
+}

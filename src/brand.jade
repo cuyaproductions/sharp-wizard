@@ -1,0 +1,19 @@
+include includes/header.jade
+section.question
+    h3 Printer Brand
+    select
+        option(selected, disabled) Select printer brand
+        option Canon
+        option Konika Minolta
+        option HP
+
+    .question__nav
+        a.question__prev(href = 'intro.html') Back
+        a.question__next(href = 'model.html') Next
+
+    .progress
+        .progress__item.progress__item--done
+        .progress__item.progress__item--done
+        .progress__item
+    
+include includes/footer.jade

@@ -1,0 +1,84 @@
+.results {
+    $parent: &;
+    flex: 1 0 500px;
+    width: 100%;
+    max-width: 650px;
+    margin: auto;
+    @include grid($direction: row, $wrap: nowrap, $align: stretch);
+    box-sizing: border-box;
+    background-color: #FFF;
+
+    aside {
+        background-color: $c-secondary;
+        color: #FFF;
+        flex: 0 0 80px;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    &__back {
+        display: block;
+        height: 64px;
+        width: 100%;
+        border-bottom: 1px solid darken($c-secondary, 15%);
+        box-shadow: 0 1px 0 rgba(#FFF, .3);
+
+        overflow: hidden;
+        text-indent: -99999em;
+        background-image: url(#{$img-base}icon-back.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+
+        &:active {
+            background-color: darken($c-secondary, 5%);
+            border-bottom: 0;
+            border-top: 1px solid darken($c-secondary, 15%);
+        }
+    }
+
+    main {
+        flex: 1 1 100%;
+        padding: 43px;
+        overflow-y: scroll;
+        box-sizing: border-box;
+    }
+
+    &__item {
+        border-bottom: 1px solid $c-results-line;
+        padding: 34px 0;
+    }
+    &__title {
+        margin-bottom: 0.1em;
+    }
+
+    &__competition {
+        display: block;
+        box-sizing: border-box;
+        font-weight: 300;
+        margin-bottom: 1.1em;
+
+        &::before {
+            content: 'vs';
+            text-indent: -99999em;
+
+            display: inline-block;
+            height: 1.3em;
+            width: 1.2em;
+            margin-right: 0.3em;
+
+            background-image: url(#{$img-base}icon-vs.svg);
+            background-repeat: no-repeat;
+            background-position: left center;
+            background-size: 100%;
+        }
+    }
+
+    &__download {
+        @include btn-regular($c-primary);
+        padding-right: 2.3em;
+
+        background-image: url(#{$img-base}icon-download.svg);
+        background-repeat: no-repeat;
+        background-position: 90% 1em;
+    }
+}

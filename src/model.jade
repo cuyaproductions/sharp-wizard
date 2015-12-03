@@ -1,0 +1,19 @@
+include includes/header.jade
+section.question.question--model
+    h3 Printer Model
+    select.question__select
+        option(selected, disabled) Select printer model
+        option Canon
+        option Konika Minolta
+        option HP
+    .question__or or
+    a.question__all(href = 'results-filter.html') Show all Konica Minolta comparisons
+    .question__nav
+        a.question__prev(href = 'brand.html') Back
+        a.question__next(href = 'results.html') Next
+    
+    .progress
+        .progress__item.progress__item--done
+        .progress__item.progress__item--done
+        .progress__item.progress__item--done
+include includes/footer.jade

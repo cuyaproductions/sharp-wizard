@@ -1,0 +1,14 @@
+@mixin grid($direction: column, $align: flex-start, $justify: flex-start, $wrap: wrap) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;
+    flex-wrap: $wrap;
+}
+@mixin col($span, $flex, $omega: null) {
+    display: block;
+    flex: #{$flex};
+    width: nth($flex, 3);
+    max-width: if($omega, $span / 12 * 100%, $span / 12 * 100% - 2%);
+    margin-right: if($omega, 0, 2%);
+}

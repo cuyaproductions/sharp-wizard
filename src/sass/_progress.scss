@@ -1,0 +1,18 @@
+.progress {
+    @include grid($direction: row, $align: center, $justify: center);
+    width: 100%;
+    margin-top: 22px;
+    &__item {
+        margin-left:3px;
+        margin-right: 3px;
+        box-sizing: border-box;
+        width: 10px;
+        height: 10px;
+        background-color: $c-progress;
+        box-shadow: inset 0 2px 0 rgba(black, .15);
+
+        &--done {
+            background-color: lighten($c-primary, 30%);
+        }
+    }
+}
