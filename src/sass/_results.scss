@@ -5,6 +5,7 @@
     width: 100%;
     max-width: 650px;
     margin: auto;
+    margin-top: 0;
     @include grid($direction: row, $wrap: nowrap, $align: stretch);
     box-sizing: border-box;
     background-color: #FFF;
