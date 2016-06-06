@@ -91,5 +91,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-svg-cleaner');
     grunt.loadNpmTasks('grunt-hologram');
 
+    grunt.registerTask('build', ['jade', 'sass', 'autoprefixer', 'svg_cleaner']);
     grunt.registerTask('serve', ['connect', 'watch']);
-}
+};
